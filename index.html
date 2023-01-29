@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Design Challenge HTML</title>
+</head>
+<body>
+    <section class="text-gray-600 body-font relative">
+        <div class="container p-5 mx-auto">
+          
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap">
+              <div class="p-2 w-full">
+                <!-- Textfield -->
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm font-medium text-gray-700">Add a comment</label>
+                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 mt-3 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+              </div>
+              <div class="p-2 flex items-center flex-wrap pb-8 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+                <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-lg text-md inline-flex items-center">Post</button>
+                <span class="text-gray-400 inline-flex items-center ml-auto leading-none text-sm py-1">0/1024 characters</span>
+              </div>
+
+              <div class="p-4 w-full pt-3 mt-3">
+                <!-- Heading -->
+         
+                <h6 class="sm:text-xl text-lg font-bold title-font text-gray-900 mb-4">All Comments (30)</h3>
+
+                <!-- User's Comment -->
+                <span class="flex-grow flex flex-col">
+                    <span class="title-font font-regular text-gray-900  mb-2">Lorem ipsum dolor sit amet consectetur. Mauris viverra scelerisque malesuada velit habitant dictumst amet euismod. Nisl tristique diam aliquam malesuada auctor eget.</span>
+                    <div class="flex items-center flex-wrap mt-auto w-full pb-8 mb-2 border-b-2 border-gray-100">
+                        <span class="text-gray-600 text-sm">By You · 10 mins ago</span>
+                        <span class="text-gray-400 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 border-r-2 border-gray-200">
+                            <button class="text-gray-400 inline-flex items-center transition duration-150 ease-in-out hover:text-indigo-500" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Comment">
+                                <svg fill="none" width="20px" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"></path>
+                              </svg>
+                            </button>
+                        </span>
+                        <button class="text-gray-400 inline-flex items-center transition duration-150 ease-in-out hover:text-red-500" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Comment">
+                            <svg fill="none"  width="20px" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"></path>
+                              </svg>
+                        </button>
+                    </div>
+                </span>
+
+                <!-- Other's Comment -->
+                <span class="flex-grow flex flex-col mt-2">
+                    <span class="title-font font-regular text-gray-900 mb-2">This is another comment</span>
+                    <span class="text-gray-600 text-sm pb-8 mb-2 border-b-2 border-gray-100">By Steve Scheffler · Jan 25, 2023 at 7:17AM</span>
+                </span>
+
+                <span class="flex-grow flex flex-col mt-2">
+                    <span class="title-font font-regular text-gray-900 mb-2">This is a comment</span>
+                    <span class="text-gray-600 text-sm mb-2 pb-8 mb-2 border-b-2 border-gray-100">By Steve Scheffler · Jan 25, 2023 at 6:55AM</span>
+                </span>
+
+                <div class="flex items-center w-full text-center pt-2">
+                 <span class="w-full text-gray-600 text-sm font-medium tracking-wide">Load More</span>   
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Required popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new Tooltip(tooltipTriggerEl);
+    });
+    </script>
+</body>
+</html>
